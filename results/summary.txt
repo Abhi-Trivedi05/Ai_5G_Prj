@@ -1,0 +1,21 @@
+Energy-Efficient 5G RAN Optimization (Q-Learning)
+============================================================
+Generated: 2026-04-22T22:40:11
+Seed: 42
+Small cells: 5
+Episodes: 800
+Steps/episode (hours): 24
+
+Total daily energy (Wh)
+- Always ON : 1908.5
+- Random    : 1510.2
+- RL Agent  : 1398.7
+
+Energy savings (RL vs Always ON)
+- Saved: 509.8 Wh
+- Saved: 26.7%
+
+Dropped traffic (Mbps total over 24 hours)
+- Always ON : 0.00
+- Random    : 0.00
+- RL Agent  : 0.00
