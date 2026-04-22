@@ -158,25 +158,3 @@ All parameters can be tweaked in `config.py`:
 | `DISCOUNT_FACTOR` | 0.95 | Future reward importance (γ) |
 | `EPSILON_START` | 1.0 | Initial exploration rate |
 | `QOS_PENALTY_WEIGHT` | 50.0 | Penalty for dropped traffic |
-
----
-
-## 🎓 Viva Preparation Notes
-
-### Key Concepts to Explain
-1. **Why RL?** — The problem is sequential (decisions at each hour affect future state) and the optimal policy is unknown → perfect fit for RL
-2. **Why Q-Learning?** — Simple, well-understood, no neural network needed for this state space size
-3. **State discretization** — We bin continuous traffic into low/medium/high to make the Q-table finite
-4. **ε-greedy** — Balance between exploring new actions and exploiting known good ones
-5. **Reward shaping** — Energy cost + QoS penalty ensures the agent saves energy without dropping users
-
-### Likely Viva Questions
-- *"Why not use Deep Q-Network?"* → Our state space is small enough for tabular Q-learning. DQN would be overkill and harder to interpret.
-- *"How do you ensure QoS?"* → The reward function heavily penalizes dropped traffic, so the agent learns to avoid turning off too many cells.
-- *"What if traffic patterns change?"* → Retrain the agent on new data. The sinusoidal model can be adjusted via config.py.
-- *"How is this different from a rule-based approach?"* → The RL agent discovers the optimal policy automatically without manual threshold tuning.
-
----
-
-## 📄 License
-This project is created for educational purposes as a final-year project demonstration.
